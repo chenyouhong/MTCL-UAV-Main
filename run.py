@@ -46,7 +46,7 @@ if __name__ == '__main__':
     parser.add_argument('--patch_size_list', nargs='+', type=int, default=[16, 12, 8, 32, 12, 8, 6, 4, 8, 6, 4, 2])
     parser.add_argument('--do_predict', action='store_true', help='whether to predict unseen future data')
     parser.add_argument('--revin', type=int, default=1, help='whether to apply RevIN')
-    parser.add_argument('--drop', type=float, default=0.1, help='dropout ratio')
+    parser.add_argument('--drop', type=float, default=0.1, help='dropout ratio')#原本项目0.1
     parser.add_argument('--embed', type=str, default='timeF',
                         help='time features encoding, options:[timeF, fixed, learned]')
     parser.add_argument('--residual_connection', type=int, default=1)
