@@ -23,7 +23,7 @@ Write-Host "Starting Training with Feature Dimension: $NUM_NODES" -ForegroundCol
 # 3. 执行 Python 命令
 # 使用反引号 (`) 进行换行
 python -u run.py `
-    --is_training 1 `
+    --is_training 1 `  # 1：表示进行训练和测试。 0：表示仅进行测试
     --model $MODEL_NAME `
     --data $DATA_TYPE `
     --root_path $DATA_ROOT `

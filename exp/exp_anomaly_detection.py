@@ -232,6 +232,9 @@ class Exp_Anomaly_Detection(Exp_Basic):
         test_energy = np.array(attens_energy)
         combined_energy = np.concatenate([train_energy, test_energy], axis=0)
         threshold = np.percentile(combined_energy, 100 - self.args.anomaly_ratio)
+        # 修改后 (仅使用 test_energy):
+        #threshold = np.percentile(test_energy, 100 - self.args.anomaly_ratio)
+        #print(f"Dynamic Threshold (Test Only): {threshold}")
         print("Threshold :", threshold)
 
         # (3) evaluation on the test set
